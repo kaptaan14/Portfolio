@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo"><span style="color: red;">A</span>shish <span style="color: red;">S</span>ingh</a>
+
+        <nav class="navbar">
+            <a href="#" style="--i:1">About</a>
+            <a href="#" style="--i:2">Education</a>
+            <a href="#" style="--i:3">Skills</a>
+            <a href="#" style="--i:4">Projects</a>
+            <a href="#contacts" style="--i:5">Contact Me</a>
+
+        </nav>
+
+
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Namaste, It's me</h3>
+            <h1>Ashish Singh</h1>
+            <h3>And I'm a <span class="text"> </span> </h3>
+            <p>I'm a Student with little much experience of Web Designing.
+                <br>Have expertise to create responsive sites, Frontend Design etc etc.
+            </p>
+
+            <div class="home-sci">
+                <a href="https://www.facebook.com/profile.php?id=100069725958323" style="--i:7"><i
+                        class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/hiddencaptain/" style="--i:8"><i
+                        class='bx bxl-instagram-alt'></i></a>
+                <a href="https://github.com/kaptaan14" style="--i:9"><i class='bx bxl-github'></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+916005032462" style="--i:10"><i
+                        class='bx bxl-whatsapp-square'></i></a>
+            </div>
+            <a href="#" class="btn-box">Hire Me</a>
+
+        </div>
+        <img id="image" src="images\image.jpeg" style="border-radius: 50%; width: 390px; height: 400px;" alt="image">
+    </section>
+
+
+
+
+    <section class="contact" id="contacts">
+        <div class="contact-box">
+            <h2>Contact Me</h2>
+            <form>
+                <p>Name</p>
+                <input type="text" name="" placeholder="Enter Name">
+                <p>Email</p>
+                <input type="email" name="" placeholder="Enter Email">
+                <p>Message</p>
+                <textarea placeholder="Type your message here"></textarea>
+                <input type="submit" name="" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        var typed = new Typed(".text", {
+            strings: ["Student", "Developer", "Learner", "Student"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.querySelector("header").classList.remove("hide");
+            } else {
+                document.querySelector("header").classList.add("hide");
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+
+        document.querySelector('a[href="#contacts"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            var targetElement = document.getElementById('contacts');
+            var targetPosition = targetElement.offsetTop;
+            var currentPosition = window.pageYOffset;
+            var distance = targetPosition - currentPosition;
+            var duration = 500; // Duration of the animation in milliseconds
+            var start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                var progress = timestamp - start;
+                window.scrollTo(0, easeInOutQuad(progress, currentPosition, distance, duration));
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            window.requestAnimationFrame(step);
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
