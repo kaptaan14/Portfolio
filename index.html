@@ -19,7 +19,7 @@
 
         <nav class="navbar">
             <a href="#" style="--i:1">About</a>
-            <a href="#" style="--i:2">Education</a>
+            <a href="#education" style="--i:2">Education</a>
             <a href="#" style="--i:3">Skills</a>
             <a href="#" style="--i:4">Projects</a>
             <a href="#contacts" style="--i:5">Contact Me</a>
@@ -44,7 +44,7 @@
                 <a href="https://www.instagram.com/hiddencaptain/" style="--i:8"><i
                         class='bx bxl-instagram-alt'></i></a>
                 <a href="https://github.com/kaptaan14" style="--i:9"><i class='bx bxl-github'></i></a>
-                <a href="https://api.whatsapp.com/send?phone=+916005032462" style="--i:10"><i
+                <a href="https://api.whatsapp.com/send?phone=916005032462" style="--i:10"><i
                         class='bx bxl-whatsapp-square'></i></a>
             </div>
             <a href="#" class="btn-box">Hire Me</a>
@@ -53,8 +53,47 @@
         <img id="image" src="image.jpeg" style="border-radius: 50%; width: 390px; height: 400px;" alt="image">
     </section>
 
+<!-- Education sectiopn  -->
 
 
+
+<section class="education" id="education">
+
+    <h2 style="margin: 20px; text-align: center;">Education</h2>
+<table>
+    <tr>
+      <td><b>Degree/Certificate</b></td>
+      <td><b>Institute/Board</b></td>
+      <td><b>CGPA/Percentage</b></td>
+      <td><b>Year</b></td>
+    </tr>
+    <tr>
+      <td>B.tech</td>
+      <td>G.L. Bajaj Institute of Technology and Management</td>
+      <td>7.5(CGPA)</td>
+      <td>2021-Present</td>
+    </tr>
+    <tr>
+      <td>Senior Secondary</td>
+      <td>JKBOSE(Board)</td>
+      <td>88%</td>
+      <td>2019-2021</td>
+    </tr>
+    <tr>
+      <td>Secondary</td>
+      <td>JKBOSE(Board)</td>
+      <td>79.2%</td>
+      <td>2018-2019</td>
+    </tr>
+  </table>
+
+</section>
+
+
+
+
+
+<!-- Contact section  -->
 
     <section class="contact" id="contacts">
         <div class="contact-box">
@@ -100,6 +139,34 @@
         document.querySelector('a[href="#contacts"]').addEventListener('click', function (e) {
             e.preventDefault();
             var targetElement = document.getElementById('contacts');
+            var targetPosition = targetElement.offsetTop;
+            var currentPosition = window.pageYOffset;
+            var distance = targetPosition - currentPosition;
+            var duration = 500; // Duration of the animation in milliseconds
+            var start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                var progress = timestamp - start;
+                window.scrollTo(0, easeInOutQuad(progress, currentPosition, distance, duration));
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            window.requestAnimationFrame(step);
+        });
+
+        document.querySelector('a[href="#education"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            var targetElement = document.getElementById('education');
             var targetPosition = targetElement.offsetTop;
             var currentPosition = window.pageYOffset;
             var distance = targetPosition - currentPosition;
