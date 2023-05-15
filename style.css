@@ -210,6 +210,25 @@ body {
 }
 
 
+/* skills section  */
+.container{
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-sec ul  {
+    background-color: #0ef;
+    color: #000033;
+    font-display: center;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+
+
 
 /* tables section  */
 table {
