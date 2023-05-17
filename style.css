@@ -51,14 +51,13 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    animation-delay: calc(.2s * var(--i)); 
+    transition: transform 0.3s;
 }
 
 .navbar a:hover {
     color: #0ef;
+    transform: scale(1.2);
 }
 
 .home {
