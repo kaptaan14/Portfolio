@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-
+    background-color: black;
     transition: transform 0.3s ease-in-out;
 
 }
@@ -29,6 +29,10 @@ body {
 .header.hide {
     transform: translateY(-60px);
 }
+
+
+
+
 
 .logo {
     position: relative;
@@ -257,6 +261,7 @@ body {
 .container{
     justify-content: center;
     align-items: center;
+    padding: 60px;
 }
 
 .skills-sec ul  {
@@ -274,6 +279,12 @@ body {
 
 
 /* tables section  */
+
+.education{
+    margin: 70px;
+    padding: 60px;  
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -355,4 +366,8 @@ input[type="submit"]:active {
 	.contact-box {
 		width: 90%;
 	}
+}
+
+.spacer{
+    height: 100vh;
 }
