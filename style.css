@@ -157,6 +157,49 @@ body {
         0 0 100px cyan, 0 0 200px cyan
 }
 
+
+
+
+.connect{
+    background-color: #0ef;
+}
+
+
+.whatsapp img{
+    display: flex;
+    position: fixed;
+    width: 70px;
+    height: 40px;
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 50px;
+    right: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    z-index: 1;
+}
+
+.gmail img{
+    display: flex;
+    position: fixed;
+    width: 70px;
+    height: 40px;
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 50px;
+    right: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    z-index: 1;
+}
+
+.gmail img:hover , .whatsapp img:hover{
+    cursor: pointer;
+}
+
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);

@@ -18,7 +18,7 @@
         <a href="#home" class="logo"><span style="color: red;">A</span>shish <span style="color: red;">S</span>ingh</a>
 
         <nav class="navbar">
-            <a href="#" style="--i:1">About</a>
+            <a href="#about" style="--i:1">About</a>
             <a href="#education" style="--i:2">Education</a>
             <a href="#skills" style="--i:3">Skills</a>
             <a href="#" style="--i:4">Projects</a>
@@ -29,7 +29,22 @@
 
     </header>
 
-    <section class="home">
+    <div class="connect">
+
+        <div class="whatsapp">
+            <a href="https://wa.me/916005032462" target="_blank">
+                <img src="https://1000logos.net/wp-content/uploads/2021/04/WhatsApp-logo.png" alt="W">
+            </a>
+        </div>
+
+        <div class="gmail">
+            <a href="mailto:mrashishthakur2@gmail.com" target="_blank">
+            <img onclick="gmail()" src="https://1000logos.net/wp-content/uploads/2021/05/Gmail-logo.png" alt="G">
+        </a>
+    </div>
+    </div>
+
+    <section class="home" id="about">
         <div class="home-content">
             <h3>Namaste, It's me</h3>
             <h1>Ashish Singh</h1>
@@ -93,18 +108,18 @@
     <!-- Skills Section  -->
     <section class="skills" id="skills">
         <div class="container">
-        <div class="skills-sec">
-            <h2 style="margin: 20px; text-align: center;">Skills</h2>
-            <ul>
-                <li><b>Programming Languages : </b> <i>C, C++, JavaScript</i> </li>
-                <li><b>Web Technologies : </b> <i>HTML, CSS</i> </li>
-                <li><b>Database Management : </b> <i>MySQL</i> </li>
-                <li><b>Miscellaneous : </b> <i>Node.js, Express.js</i> </li>
-                <li><b>Operating System : </b> <i>Microsoft, Ubuntu</i> </li>
+            <div class="skills-sec">
+                <h2 style="margin: 20px; text-align: center;">Skills</h2>
+                <ul>
+                    <li><b>Programming Languages : </b> <i>C, C++, JavaScript</i> </li>
+                    <li><b>Web Technologies : </b> <i>HTML, CSS</i> </li>
+                    <li><b>Database Management : </b> <i>MySQL</i> </li>
+                    <li><b>Miscellaneous : </b> <i>Node.js, Express.js</i> </li>
+                    <li><b>Operating System : </b> <i>Microsoft, Ubuntu</i> </li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
     </section>
 
 
@@ -238,6 +253,13 @@
 
             window.requestAnimationFrame(step);
         });
+
+
+
+
+
+
+
 
 
 
